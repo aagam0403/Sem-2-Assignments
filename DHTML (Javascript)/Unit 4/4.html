@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="val()">
+        <table>
+            <tr>
+                <td> User Name :</td>
+                <td> <input type="text" id="n" onfocus="color(this)"> </td>
+            </tr>
+            <tr>
+                <td> Password :</td>
+                <td> <input type="password" id="p"> </td>
+            </tr>
+            <tr>
+                <td> City of Employment :</td>
+                <td> <input type="text" id="c"> </td>
+            </tr>
+            <tr>
+                <td> Web Server : </td>
+                <td> <select id="w" onchange="change()"> <option>--Choose a server--</option> <option>India</option> <option>Portugal</option> <option>Russia</option> </select> </td>
+            </tr>
+            <tr>
+                <td> Please specify <br> your role :</td>
+                <td> <input type="radio" name="r1" id="r1">Admin <br> <input type="radio" name="r1" id="r2">Engineer <br> <input type="radio" name="r1" id="r3">Manager <br> <input type="radio" name="r1" id="r4">Guest <br> </td>
+            </tr>
+            <tr>
+                <td> Single Sign-on <br> to the following :</td>
+                <td> <input type="checkbox" id="c1">Mail <br> <input type="checkbox" id="c2">Payroll <br> <input type="checkbox" id="c3">Self-Service </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Login" onclick="print()"> </td>
+                <td> <input type="reset" value="Reset" onclick="reset()"> </td>
+            </tr>
+        </table>
+    </form>
+<script>
+    function val()
+    {
+        if(document.getElementById("n").value=="" || document.getElementById("p").value=="" || document.getElementById("c")=="" || document.getElementById("w").value=="" || document.getElementById("r1").checked!=true && document.getElementById("r2").checked!=true && document.getElementById("r3").checked!=true && document.getElementById("r4").checked!=true || document.getElementById("c1").checked!=true && document.getElementById("c2").checked!=true && document.getElementById("c3").checked!=true)
+        {
+            alert("All Form FIelds are necessary");
+        }
+    }
+    function change()
+    {
+        alert("User has changed web server");
+    }
+    function color(x)
+    {
+        x.style.background="blue";
+    }
+    function reset()
+    {
+        document.getElementById("n").value.reset();
+        document.getElementById("p").value.reset();
+        document.getElementById("c").value.reset();
+        document.getElementById("w").value.reset();
+    }
+    function print()
+    {
+        var name=document.getElementById("n").value;
+        var pass=document.getElementById("p").value
+        var city=document.getElementById("c").value
+        var web=document.getElementById("w").value
+    
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onkeypress="press(this)" onsubmit="val()">
+        <table>
+            <tr>
+                <td> Name </td>
+                <td> <input type="text" id="n" onkeyup="upper()"> </td>
+            </tr>
+            <tr>
+                <td> Surname</td>
+                <td> <input type="text"> </td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td> <input type="date"> </td>
+            </tr>
+            <tr>
+                <td> Address</td>
+                <td> <input type="text"> </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td> <input type="text" id="e"> </td>
+            </tr>
+            <tr>
+                <td> Zip</td>
+                <td> <input type="text"> </td>
+            </tr>
+            <tr>
+                <td colspan="2"> <input type="submit" value="Register"> </td>
+            </tr>
+        </table>
+    </form>
+<script>
+    function press(x)
+    {
+        x.style.background="lime";
+    }
+    function upper()
+    {
+        var x=document.getElementById("n");
+        x.value=x.value.toUpperCase();
+    }
+    function val()
+    {
+        var email = document.getElementById("e").value;
+        var pos = email.indexOf("@");
+        var p2 = email.lastIndexOf(".");
+        if (pos < 1 || p2 < pos + 2 || p2 + 2 >= email.length) 
+        {
+          alert("Invalid Email");
+        }
+    }
+</script>
+</body>
+</html>

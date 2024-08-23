@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        function validate(event)
+        {
+            var email = document.getElementById('email').value;
+            if (email === "")
+            {
+                alert("Email is Required");
+            }
+            else 
+            {
+                document.getElementById("subscriptionInfo").innerHTML = "Subscribed email: <strong>" +email+ "</strong>";
+            }
+        }
+    </script>
+    <h1>SUBSCRIBE TO OUR MAILING LIST</h1>
+    <form>
+        Email Address<br>
+        <input type="email" id="email"><br>
+        First Name<br>
+        <input type="text" id="fn"><br>
+        Last Name<br>
+        <input type="text" id="ln"><br><br>
+        <input type="submit" value="Subscribe" onclick="validate(event)">
+    </form>
+    <div id="subscriptionInfo"></div>
+</body>
+</html>

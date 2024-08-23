@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Assignment 4.1 </title>
+	<script type="text/javascript">
+		function validate()
+		{
+			var xx=document.getElementById("fname").value;
+			var y=document.getElementById("lname").value;
+			var z=document.getElementById("screen").value;
+			var a=document.getElementById("M").checked;
+			var b=document.getElementById("F").checked;
+			var c=document.getElementById("phone").value;
+			var d=document.getElementById("pass").value;
+			var e=document.getElementById("cpass").value;
+			var x=document.getElementById("email").value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+
+			if(xx===""&&y===""&&z===""&&x==="")
+			{
+				alert("All field are requied");
+				return false;
+			}
+			if(!isNaN(xx))
+			{
+				alert("First Name not be null and Not a number");
+				return false;
+			}
+			if(!isNaN(y))
+			{
+				alert("Last Name not be null and Not a number");
+				return false;
+			}
+			if(!isNaN(z))
+			{
+				alert("Screen Name not be null and Not a number");
+				return false;
+			}
+			if(!a&&!b)
+			{
+				alert("Chose one Gender");
+				return false;
+			}
+			if(atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+			{
+				alert("not valid e-mail address");
+				return false;
+			}
+			if(c.length!==10)
+			{
+				alert("Phone Number Should be 10 digit");
+				return false;
+			}
+			if(d==="")
+			{
+				alert("Password will be requied ");
+				return false;
+			}
+			if(e==="")
+			{
+				alert("Confirm Password will be requied");
+				return false;
+			}
+			if(d!==e)
+			{
+				alert("IT IS NOT SAME");
+				return false;
+			}
+			else
+			{
+				var details = "First Name:"+xx+"\nLast Name:"+y+"\nScreen Name:"+z+ "\nE-mail:"+x+"\nPhone Number:"+c+"\nPassword:"+d+"\nConfirm Password:"+cpass;
+				 alert("Form registered successfully!\n\n" + details);
+			}
+			
+		}
+	</script>
+	<style type="text/css">
+		.k{
+			color: white;
+			background-color:green;
+		}
+		.n{
+			background-color:tomato;
+			color: white;
+		}
+		.b{
+			width:30%;
+		}
+		body
+		{
+			text-size:50%;
+			background-color:orange;
+			color:#e5ee57;
+		}
+		form
+		{
+			text-align: center;
+			background-color:#28263b;
+		}
+	</style>
+</head>
+<body>
+		<span> Sign Up </span><br><br>
+	<form><br>
+		First Name  <input type="text" name="name" placeholder="Enter First Name..." class = "b" id="fname"><br><br>
+
+		Last Name  <input type="text" name="name" placeholder="Enter Last Name..." class = "b" id="lname"><br><br>
+
+		Screen Name  <input type="text" name="name" placeholder="Enter Screen Name..." class = "b" id="screen"><br><br>
+
+		Date of Birth <select>
+			<option value = ""> Select Month</option>
+			<option value = "January"> January </option>
+			<option value = "February"> February </option>
+			<option value = "March"> March </option>
+			<option value = "April"> April </option>
+			<option value = "May"> May </option>
+			<option value = "June"> June </option>
+			<option value = "July"> July </option>
+			<option value = "August"> August </option>
+			<option value = "September"> September </option>
+			<option value = "October"> October </option>
+			<option value = "November"> November </option>
+			<option value = "December"> December </option>
+		</select>
+
+		<select>
+			<option value = ""> Select Day</option>
+			<option value = "1"> 1 </option>
+			<option value = "2"> 2 </option>
+			<option value = "3"> 3 </option>
+			<option value = "4"> 4 </option>
+			<option value = "5"> 5 </option>
+			<option value = "6"> 6 </option>
+			<option value = "7"> 7 </option>
+			<option value = "8"> 8 </option>
+			<option value = "9"> 9 </option>
+			<option value = "10"> 10 </option>
+			<option value = "11"> 11 </option>
+			<option value = "12"> 12 </option>
+			<option value = "13"> 13 </option>
+			<option value = "14"> 14 </option>
+			<option value = "15"> 15 </option>
+			<option value = "16"> 16 </option>
+			<option value = "17"> 17 </option>
+			<option value = "18"> 18 </option>
+			<option value = "19"> 19 </option>
+			<option value = "20"> 20 </option>
+			<option value = "21"> 21 </option>
+			<option value = "22"> 22 </option>
+			<option value = "23"> 23 </option>
+			<option value = "24"> 24 </option>
+			<option value = "25"> 25 </option>
+			<option value = "26"> 26 </option>
+			<option value = "27"> 27 </option>
+			<option value = "28"> 28 </option>
+			<option value = "29"> 29 </option>
+			<option value = "30"> 30 </option>
+			<option value = "31"> 31 </option>
+		</select>
+		<select>
+			<option value = ""> Select Year</option>
+			<option value = "1990"> 1990 </option>
+			<option value = "1991"> 1991 </option>
+			<option value = "1992"> 1992 </option>
+			<option value = "1993"> 1993 </option>
+			<option value = "1994"> 1994 </option>
+			<option value = "1995"> 1995 </option>
+			<option value = "1996"> 1996 </option>
+			<option value = "1997"> 1997 </option>
+			<option value = "1998"> 1998 </option>
+			<option value = "1999"> 1999 </option>
+			<option value = "2000"> 2000 </option>
+			<option value = "2001"> 2001 </option>
+			<option value = "2000"> 2002 </option>
+			<option value = "2000"> 2003 </option>
+			<option value = "2000"> 2004 </option>
+			<option value = "2000"> 2005 </option>
+			<option value = "2000"> 2006 </option>
+			<option value = "2000"> 2007 </option>
+			<option value = "2000"> 2008 </option>
+			<option value = "2000"> 2009 </option>
+			<option value = "2000"> 2010 </option>
+		</select><br><br>
+
+		Gender <input type="radio" name="gender" value="Male" id="M">Male
+		<input type="radio" name="gender" value="Female" id="F">Female<br><br>
+		Country <select class = "b">
+			<option value = ""> Select Country</option>
+			<option value = "India"> India </option>
+			<option value = "USA"> USA </option>
+			<option value = "France"> France </option>
+			<option value = "Egypt"> Egypt </option>
+			<option value = "Italy"> Italy </option>
+			<option value = "Austria"> Austria </option>
+			<option value = "Australia"> Australia </option>
+			<option value = "Brazil"> Brazil </option>
+			<option value = "China"> China </option>
+			<option value = "Canada"> Canada </option>
+			<option value = "Iceland"> Iceland </option>
+			<option value = "Japan"> Japan </option>
+		</select><br><br>
+		E-mail <input type="email" name="email" id = "email"placeholder="Enter E-mail......." class = "b"><br><br>
+		E-Phone <input type="text" name="phone" placeholder="Enter Phone......" class = "b" id = "phone"><br><br>
+		Password <input type="password" name="pass" id="pass"><br><br>
+		Confirm Password <input type="password" name="pass" id="cpass"><br><br>
+		<span><input type="checkbox" name="checkbox"> I agree to the Terms of use</span><br><br><br><br>
+	</form>
+	<table align="right">
+		<td><input type="button" value = "submit" class = "k" onclick = "validate()">
+		<input type="reset" value = "Cancle" class = "n" onclick="reset()"></td>
+</table>
+<p id = "p1"></p>
+<p id = "P"></p>
+</body>
+</html>

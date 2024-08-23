@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        function validate() {
+            var firstName = document.getElementById('fn').value;
+            var lastName = document.getElementById('ln').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var hobbies = document.querySelectorAll('input[name="Hobbies"]:checked');
+            var country = document.getElementById('select').value;
+
+            if (firstName == "" || lastName == "" || !gender || hobbies.length === 0 || country == "") 
+            {
+                alert("All Fields Are Required");
+            }
+            else 
+            {
+                var genderValue = gender.value;
+                var hobbiesArray = Array.from(hobbies).map(hobby => hobby.value);
+                document.getElementById("subscriptionInfo").innerHTML = 
+                    "First Name: <strong>" + firstName + "</strong><br>" +
+                    "Last Name: <strong>" + lastName + "</strong><br>" +
+                    "Gender: <strong>" + genderValue + "</strong><br>" +
+                    "Hobbies: <strong>" + hobbiesArray.join(', ') + "</strong><br>" +
+                    "Country: <strong>" + country + "</strong>";
+            }
+        }
+    </script>
+    <h1>REGISTRATION FORM</h1>
+    <form>
+        First Name: <input type="text" id="fn"><br><br>
+        Last Name: <input type="text" id="ln"><br><br>
+        Gender: 
+        <input type="radio" name="gender" id="male">Male
+        <input type="radio" name="gender" id="female">Female<br><br>
+        Hobbies: 
+        <input type="checkbox" name="Hobbies" id="cricket">Cricket
+        <input type="checkbox" name="Hobbies" id="singing">Singing
+        <input type="checkbox" name="Hobbies" id="dancing">Dancing<br><br>
+        Country: 
+        <select id="select">
+            <option value="">Select a Country</option>
+            <option value="Country 1">Country 1</option>
+            <option value="Country 2">Country 2</option>
+            <option value="Country 3">Country 3</option>
+        </select><br><br>
+
+        <input type="submit" value="Validate Fields" onclick="validate(); return false;">
+    </form>
+    <div id="subscriptionInfo"></div>
+</body>
+</html>

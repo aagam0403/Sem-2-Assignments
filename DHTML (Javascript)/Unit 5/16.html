@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @keyframes colorchange {
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: green;
+        }
+        50% {
+          background-color: blue;
+        }
+        100% {
+          background-color: cyan;
+        }
+      }
+
+      @keyframes movediv {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(-100px);
+        }
+      }
+
+      #mydiv {
+        width: 100px;
+        height: 100px;
+        animation: colorchange 15s infinite,
+          movediv 2s infinite alternate-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mydiv"></div>
+  </body>
+</html>

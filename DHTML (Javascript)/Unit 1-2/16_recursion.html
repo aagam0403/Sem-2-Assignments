@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		var n=prompt("Enter number:");
+		n=eval(n);
+		function num(n)
+		{
+			document.write("<br>"+n);
+			const newNumber=n-1;
+			if(newNumber>0)
+			{
+				num(newNumber);
+			}
+		}
+		num(n);
+	</script>
+	<title></title>
+</head>
+<body>
+</body>
+</html>

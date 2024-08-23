@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+		s1=prompt("Enter Subject 1 Marks = ");
+		s2=prompt("Enter Subject 2 Marks = ");
+		s3=prompt("Enter Subject 3 Marks = ");
+		s4=prompt("Enter Subject 4 Marks = ");
+		s5=prompt("Enter Subject 5 Marks = ");
+		per=((eval(s1)+eval(s2)+eval(s3)+eval(s4)+eval(s5))/500)*100;
+		document.write("Percentage = "+per);
+		if (per>70)
+		{
+			document.write("<br>Distinction");
+		}
+		else if (per>=60 && per<=69)
+		{
+			document.write("<br>First Class");
+		}
+		else if (per>=50 && per<=59)
+		{
+			document.write("<br>Second Class");
+		}
+		else if (per>=35 && per<=49)
+		{
+			document.write("<br>Average");
+		}
+		else
+		{
+			document.write("<br>Fail");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

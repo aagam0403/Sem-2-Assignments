@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div Transition</title>
+  <style>
+    /* Styling for the div */
+    #myDiv {
+      width: 200px;
+      height: 100px;
+      background-color: blue;
+      transition: all 0.3s ease; /* Smooth transition for all properties */
+    }
+
+    /* Styling for the div when hovered */
+    #myDiv:hover {
+      transform: scale(1.5) rotate(300deg); /* Scale and rotate the div on hover */
+    }
+  </style>
+</head>
+<body>
+  <div id="myDiv"></div>
+
+  <script>
+    // JavaScript to handle the mouse hover event
+    var div = document.getElementById("myDiv");
+
+    // Add event listener for mouse hover
+    div.addEventListener("mouseenter", function() {
+      div.style.transform = "scale(1.5) rotate(300deg)";
+    });
+
+    // Add event listener for mouse leave
+    div.addEventListener("mouseleave", function() {
+      div.style.transform = "scale(1) rotate(0deg)";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Load Transition Example</title>
+    <style>
+      .transition-div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transition: background-color 10s;
+      }
+      @keyframes colorChange {
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: green;
+        }
+        50% {
+          background-color: blue;
+        }
+        75% {
+          background-color: cyan;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+      .transition-div {
+        animation: colorChange 10s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transition-div"></div>
+  </body>
+</html>

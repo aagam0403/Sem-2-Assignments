@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return val()">
+        <table>
+            <tr>
+                <td> Name </td>
+                <td> <input type="text" id="n"> </td>
+            </tr>
+            <tr>
+                <td> Age </td>
+                <td> <input type="text" id="a"> </td>
+            </tr>
+            <tr>
+                <td> Department </td>
+                <td> <input type="text" id="dept"> </td>
+            </tr>
+            <tr>
+                <td> Designation</td>
+                <td> <input type="text" id="des"> </td>
+            </tr>
+            <tr>
+                <td> No. of working days</td>
+                <td> <input type="text" id="day"> </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Submit"> </td>
+                <td> <input type="reset"> </td>
+            </tr>
+        </table>
+    </form>
+<p id="p1"> </p>
+<script>
+    function val()
+    {
+        event.preventDefault();
+        if(document.getElementById("n").value == "")
+        {
+            alert("Enter name");
+        }
+        if(document.getElementById("a").value == "")
+        {
+            alert("Enter age");
+        }
+        if(document.getElementById("dept").value == "")
+        {
+            alert("Enter Department");
+        }
+        if(document.getElementById("des").value == "")
+        {
+            alert("Enter Designation");
+        }
+        if(document.getElementById("day").value == "")
+        {
+            alert("Enter No. of Working Days");
+        }
+        if(parseInt(document.getElementById("a").value) < 18)
+        {
+            alert("Enter valid age");
+        }
+        var sal;
+        if(parseInt(document.getElementById("day").value)<25)
+        {
+            sal="Salary : "+8000;
+            document.getElementById("p1").innerHTML=sal;
+        }       
+        else
+        {
+            sal="Salary :"+10000;
+            document.getElementById("p1").innerHTML=sal;
+        }
+    }
+</script>
+</body>
+</html>

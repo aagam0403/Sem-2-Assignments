@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Transition</title>
+    <style>
+      #color-transition {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transition: background-color 15s linear;
+      }
+    </style>
+  </head>
+  <body onload="changeBackgroundColor()">
+    <div id="color-transition"></div>
+
+    <script>
+      function changeBackgroundColor() {
+        var divElement = document.getElementById("color-transition");
+        setTimeout(function () {
+          divElement.style.backgroundColor = "blue";
+        }, 0);
+      }
+    </script>
+  </body>
+</html>

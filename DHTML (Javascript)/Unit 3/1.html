@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Field Demo</title>
+</head>
+<body>
+<select id="selectOption" onchange="displaySelectedOption()">
+    <option value="">Select an option</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+</select>
+
+<div id="selectedOption"></div>
+
+<script>
+    function displaySelectedOption() {
+        var selectElement = document.getElementById("selectOption");
+        var selectedOption = selectElement.options[selectElement.selectedIndex].text;
+        document.getElementById("selectedOption").innerHTML = "Selected Option: " + selectedOption;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function val() {
+            var x = document.getElementById("n").value;
+            var pos = x.indexOf("@");
+            var p2 = x.lastIndexOf(".");
+            if (x == "") {
+                alert("Enter Email");
+                return false;
+            } else if (pos < 1 || p2 < pos + 2 || p2 + 2 >= x.length) {
+                alert("Invalid Email");
+                return false;
+            }
+            if (document.getElementById("p1").value == "") {
+                alert("Enter Password");
+                return false;
+            } else if (document.getElementById("p2").value == "") {
+                alert("Enter Confirm Password");
+                return false;
+            } else if (document.getElementById("p1").value != document.getElementById("p2").value) {
+                alert("Password does not match");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <form onsubmit="return val()">
+        <table>
+            <tr>
+                <td> Email </td>
+                <td> <input type="text" id="n"> </td>
+            </tr>
+            <tr>
+                <td> Password </td>
+                <td> <input type="password" id="p1"> </td>
+            </tr>
+            <tr>
+                <td>Confirm Password </td>
+                <td> <input type="password" id="p2"> </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Submit"> </td>
+                <td> <input type="reset"> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley Face</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        
+        // Draw the face
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        
+        // Draw the left eye
+        ctx.beginPath();
+        ctx.arc(100, 80, 5, 0, 2 * Math.PI);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        
+        // Draw the right eye
+        ctx.beginPath();
+        ctx.arc(120, 80, 5, 0, 2 * Math.PI);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        
+        // Draw the smile
+        ctx.beginPath();
+        ctx.moveTo(70, 120);
+        ctx.quadraticCurveTo(100, 130, 130, 120);
+        ctx.stroke();
+    </script>
+</body>
+</html>

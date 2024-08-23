@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="load()" onsubmit="val()">
+<pre>        Log IN    </pre>
+<form>
+<input type="text" id="n" placeholder="UserName" onclick="color(this)">
+<br> <br>
+<input type="password" id="p" placeholder="Password" onblur="blurFunction()">
+<br><br>
+<input type="submit" value="Log IN" style="background-color:cyan;color:white;">
+</form>
+</body>
+<script>
+    function load()
+    {
+        alert("Welcome to page");
+    }
+    function val()
+    {
+        if(document.getElementById("n").value=="" || document.getElementById("p").value=="")
+        {
+            alert("All fields are compulsory");
+        }
+    }
+    function color(x)
+    {
+        x.style.background="lime";
+    }
+    function blurFunction()
+    {
+        alert("Please click on Login Button");
+    }
+</script>
+</html>

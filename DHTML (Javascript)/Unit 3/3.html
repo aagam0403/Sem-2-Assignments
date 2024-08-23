@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        function validate() {
+            if (document.getElementById('fn').value=="" || document.getElementById('ln').value=="" || document.getElementById('add').value=="" || document.getElementById('pn').value=="") {
+                alert("All Fields Are Required");
+            } 
+            else if (!isNaN(document.getElementById("fn").value) || !isNaN(document.getElementById("ln").value)) 
+            {
+                alert("Enter Characters only in First Name & Last Name");
+            }
+            else
+            {
+                var str=document.getElementById("pn").value;
+                if (str.length != 10) {
+                    alert("The Contact number should be 10");
+                }
+            }
+        }
+    </script>
+    <h1>STUDENT DETAIL FORM</h1>
+    <form>
+        First Name<br>
+        <input type="text" id="fn"><br>
+        Last Name<br>
+        <input type="text" id="ln"><br><br>
+        Address<br>
+        <input type="text" id="add"><br>
+        Phone Number<br>
+        <input type="number" id="pn"><br><br>
+        
+        <input type="submit" value="Subscribe" onclick="validate(); return false;">
+    </form>
+</body>
+</html>
